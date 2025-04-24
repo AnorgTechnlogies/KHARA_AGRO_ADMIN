@@ -8,7 +8,6 @@ import parcel_icon from './parcel_icon.png'
 
 export const url = import.meta.env.VITE_API_KEY;
 
-// export const url = 'http://localhost:4000'
 export const currency = '₹'
 
 export const assets ={
