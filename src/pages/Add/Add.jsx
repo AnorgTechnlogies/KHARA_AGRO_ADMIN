@@ -73,7 +73,7 @@ const Add = () => {
                         <select name='category' onChange={onChangeHandler} >
                             <option value="Rice">Rice</option>
                             <option value="Pulses">Pulses</option>
-                            <option value="Flattened Rice">Flattened Rice</option>
+                            <option value="Poha">Poha</option>
                             {/* <option value="Sandwich">Sandwich</option>
                             <option value="Cake">Cake</option>
                             <option value="Pure Veg">Pure Veg</option>
