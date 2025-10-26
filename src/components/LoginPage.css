@@ -1,0 +1,100 @@
+/* Outer container */
+.login-page {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically */
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #f0f0f0;     /* fallback background */
+  padding: 1rem;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+/* Left gradient panel */
+.login-left {
+  width: 400px; /* fixed width */
+  height: 500px; /* fixed height */
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px 0 0 16px; /* rounded left corners */
+  padding: 2rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Right form panel */
+.login-right {
+  width: 400px; /* fixed width */
+  height: 500px; /* fixed height */
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 16px 16px 0; /* rounded right corners */
+  padding: 2rem;
+  box-sizing: border-box;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.08);
+  flex-direction: column;
+}
+
+/* Login card inside right panel */
+.login-card {
+  width: 100%;
+}
+
+/* Inputs and button */
+.login-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.login-button {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(90deg,#3b82f6,#8b5cf6);
+  color: white;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* Footer text */
+.login-footer {
+  margin-top: 1rem;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* Responsive for mobile */
+@media (max-width: 900px) {
+  .login-page {
+    flex-direction: column; /* stack left + right vertically */
+    height: auto;
+  }
+  .login-left, .login-right {
+    width: 90%; /* full width on mobile */
+    height: auto;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+  }
+}
+.login-page{
+  background-color: #b4b7be;
+}

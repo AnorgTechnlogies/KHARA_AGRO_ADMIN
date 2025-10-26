@@ -1,0 +1,111 @@
+/* Outer container - center card */
+.signup-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f0f0f0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  padding: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+/* Card container with left/right panels */
+.signup-card-container {
+  display: flex;
+  width: 800px;
+  max-width: 100%;
+  height: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+  background: #fff;
+}
+
+/* Left gradient panel */
+.signup-left {
+  flex: 1;
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Right form panel */
+.signup-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: #fff;
+}
+
+/* Form inside right panel */
+.signup-card {
+  width: 100%;
+  max-width: 350px;
+}
+
+/* Inputs and button */
+.signup-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.signup-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.signup-button {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  color: white;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  transition: background 0.3s;
+}
+
+.signup-button:hover {
+  background: linear-gradient(90deg, #2563eb, #7c3aed);
+}
+
+.signup-footer {
+  margin-top: 1rem;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.95rem;
+}
+
+/* Responsive - stack panels on small screens */
+@media (max-width: 900px) {
+  .signup-card-container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+  .signup-left, .signup-right {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin-bottom: 1rem;
+  }
+}
