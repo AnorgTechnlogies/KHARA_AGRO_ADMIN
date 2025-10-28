@@ -9,6 +9,9 @@ const LoginPage = ({ setIsLoggedIn }) => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
+  
+  const url = import.meta.env.VITE_API_KEY;
+
   const handleChange = (e) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
 
@@ -25,7 +28,7 @@ const LoginPage = ({ setIsLoggedIn }) => {
 
     try {
       // ✅ Axios automatically parses JSON
-      const response = await axios.post("http://localhost:4000/api/admin/login", formData, {
+      const response = await axios.post(`${url}/api/admin/login`, formData, {
         headers: { "Content-Type": "application/json" },
       });
 

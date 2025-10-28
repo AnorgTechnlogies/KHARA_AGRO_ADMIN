@@ -6,6 +6,8 @@ import "./SignupPage.css";
 const SignupPage = () => {
   const navigate = useNavigate();
 
+  const url = import.meta.env.VITE_API_KEY;
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -42,7 +44,7 @@ const SignupPage = () => {
     try {
       // ✅ API request to backend
       const response = await axios.post(
-        "http://localhost:4000/api/admin/register",
+        `${url}/api/admin/register`,
         {
           name: formData.name,
           email: formData.email,
@@ -78,7 +80,8 @@ const SignupPage = () => {
     <div className="signup-page">
       <div className="signup-card-container">
         <div className="signup-left">
-          <h2 className="text-3xl font-bold mb-2">Welcome!</h2>
+          {/* <img src="../assets/imageleftsignup.jpg" alt="leftsignupimg" /> */}
+          <h2 className="text-3xl font-bold mb-2">Welcome Khara Tech!</h2>
           <p>Create your admin account to manage your dashboard.</p>
         </div>
 

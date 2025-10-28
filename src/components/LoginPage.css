@@ -7,7 +7,7 @@
   justify-content: center; /* centers horizontally */
   align-items: center;     /* centers vertically */
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: #f0f0f0;     /* fallback background */
+  background: #fffdfd;     /* fallback background */
   padding: 1rem;
   box-sizing: border-box;
   align-items: center;
@@ -17,7 +17,7 @@
 .login-left {
   width: 400px; /* fixed width */
   height: 500px; /* fixed height */
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+ background: linear-gradient(135deg,  #8ABD2B);
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -96,5 +96,5 @@
   }
 }
 .login-page{
-  background-color: #b4b7be;
+  background-color: #f6eeee;
 }

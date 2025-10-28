@@ -12,6 +12,7 @@ const Add = () => {
     category: "rice",
     price: "",
     discount: "",
+    kg: "", // ✅ Added new field
   });
 
   const onChangeHandler = (event) => {
@@ -32,12 +33,18 @@ const Add = () => {
       return;
     }
 
+    if (!data.kg) {
+      toast.error("Please enter weight (kg).");
+      return;
+    }
+
     const formData = new FormData();
     formData.append("name", data.name);
     formData.append("description", data.description);
     formData.append("category", data.category);
     formData.append("price", data.price);
     formData.append("discount", data.discount);
+    formData.append("kg", data.kg); // ✅ Added in form data
     formData.append("image", image);
 
     try {
@@ -47,9 +54,10 @@ const Add = () => {
         setData({
           name: "",
           description: "",
-          category: "Fertilizer",
+          category: "rice",
           price: "",
           discount: "",
+          kg: "",
         });
         setImage(false);
       } else {
@@ -140,7 +148,6 @@ const Add = () => {
             <option value="Pulses">Pulses</option>
             <option value="Poha">Poha</option>
             <option value="Seed">Seed</option>
-            {/* <option value="Fertilizer">Fertilizer</option> */}
           </select>
         </div>
 
@@ -157,6 +164,19 @@ const Add = () => {
           />
         </div>
 
+        {/* Weight (kg) */}
+        <div className="add-kg flex-col">
+          <p>Weight (kg)</p>
+          <input
+            type="number"
+            name="kg"
+            onChange={onChangeHandler}
+            value={data.kg}
+            placeholder="Enter weight in kilograms"
+            required
+          />
+        </div>
+
         {/* Discount */}
         <div className="add-discount flex-col">
           <p>Discount (%)</p>
@@ -165,7 +185,7 @@ const Add = () => {
             name="discount"
             onChange={onChangeHandler}
             value={data.discount}
-            placeholder="e.g. 60"
+            placeholder="e.g. 10"
           />
         </div>
 

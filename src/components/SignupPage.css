@@ -27,7 +27,8 @@
 /* Left gradient panel */
 .signup-left {
   flex: 1;
-  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+ background: linear-gradient(135deg,  #8ABD2B);
+
   color: #fff;
   display: flex;
   flex-direction: column;
